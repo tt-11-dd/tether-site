@@ -1,4 +1,5 @@
 import logo from "../assets/logo.svg";
+import { DOWNLOADS } from "../downloads";
 import { locales } from "../locales";
 import type { Language } from "../types";
 
@@ -24,7 +25,7 @@ export function Footer({ lang }: { lang: Language }) {
               <li><a href="#download">{t.links.desktop}</a></li>
               <li><a href="#features">{t.links.features}</a></li>
               <li>
-                <a href="https://github.com/tt-11-dd/tether-ai/releases" target="_blank" rel="noreferrer">
+                <a href={DOWNLOADS.page} target="_blank" rel="noreferrer">
                   {t.links.changelog} ↗
                 </a>
               </li>
@@ -69,7 +70,7 @@ export function Footer({ lang }: { lang: Language }) {
 
       <div className="footer-bottom container">
         <p className="copyright">{t.copyright}</p>
-        <p className="open-source-note">Open Source under MIT License · Local-First Coding Workbench</p>
+        <p className="open-source-note">Open Source under MIT License · Local-First Agent Harness</p>
       </div>
     </footer>
   );

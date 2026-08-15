@@ -12,9 +12,9 @@ export const locales = {
       downloadCta: "免费下载桌面端",
     },
     hero: {
-      badge: "Tether v0.1.0 稳定版现已发布 · 开源与本地优先",
-      titleLine1: "由 DeepSeek 驱动的",
-      titleLine2: "本地 AI 编程工作台",
+      badge: "Tether v0.1.0 现已发布 · 开源 · 本地优先",
+      titleLine1: "Tether",
+      titleLine2: "Agent Harness",
       subtitle:
         "把大模型的推理与规划，变为精准、安全、可审查的代码改动。原生思维链展示、事务级 /undo 撤销、内置 MinerU 本地 OCR，100% 运行在你的机器上。",
       primaryCtaMac: "下载 macOS 版 (Apple Silicon)",
@@ -23,7 +23,7 @@ export const locales = {
       secondaryCta: "查看 GitHub 源码",
       stats: {
         privacy: "100% 本地 0600 权限存储",
-        models: "DeepSeek / OneAPI / Ollama",
+        models: "开放网关 · Ollama · 自定义 API",
         undo: "原子级 /undo 文件快照回滚",
         license: "MIT 开源协议",
       },
@@ -31,7 +31,7 @@ export const locales = {
     productPreview: {
       tag: "工作台界面",
       title: "专注、高效的本地 AI 编程工作区",
-      subtitle: "直观展示 DeepSeek 思考链推导、文件检索、实时代码打补丁与快照撤销。",
+      subtitle: "直观展示思考链推导、文件检索、实时代码打补丁与快照撤销。",
     },
     download: {
       tag: "桌面版安装包",
@@ -40,24 +40,25 @@ export const locales = {
       macArm: {
         title: "macOS (Apple Silicon)",
         desc: "适用于 M1 / M2 / M3 / M4 / M5 芯片的 Mac 电脑",
-        file: "Tether_0.1.0_arm64.dmg",
-        size: "约 96 MB",
+        file: "Tether-0.1.0-arm64.dmg",
+        size: "约 130 MB",
         badge: "推荐",
       },
       macIntel: {
         title: "macOS (Intel)",
         desc: "适用于传统 Intel 架构的 Mac 电脑",
-        file: "Tether_0.1.0_x64.dmg",
-        size: "约 102 MB",
+        file: "暂未提供 Intel 安装包",
+        size: "—",
       },
       win: {
         title: "Windows (x64)",
         desc: "适用于 Windows 10 / Windows 11 64位系统",
-        file: "Tether_0.1.0_x64-setup.exe",
-        size: "约 88 MB",
+        file: "Tether-Setup-0.1.0.exe",
+        size: "约 114 MB",
         badge: "Win 10/11",
       },
-      notice: "注：macOS 安装包已完成 Developer ID 签名与 Apple 公证；Windows 提供离线沙箱防护，首次运行若遇 SmartScreen 提示点击「更多信息 -> 仍要运行」即可。",
+      notice:
+        "注：当前 macOS 为开发签名包，若提示无法打开可右键「打开」，或执行 xattr -cr /Applications/Tether.app；Windows 首次运行若遇 SmartScreen，点击「更多信息 → 仍要运行」即可。",
     },
     architecture: {
       tag: "架构解析",
@@ -213,7 +214,7 @@ export const locales = {
       cta: "在 GitHub Issues 反馈问题 ↗",
     },
     footer: {
-      tagline: "由 DeepSeek 驱动的本地 AI 编程工作台",
+      tagline: "开源、本地优先的 Agent Harness",
       builtWith: "以极简与纯粹的开发者体验为中心构建。",
       colProduct: "产品",
       colResources: "资源",
@@ -244,18 +245,18 @@ export const locales = {
       downloadCta: "Download Desktop App",
     },
     hero: {
-      badge: "Tether v0.1.0 Stable Release · Open Source & Local-First",
-      titleLine1: "Coding agent powered by",
-      titleLine2: "DeepSeek & Local Harness",
+      badge: "Tether v0.1.0 is out · Open source · Local-first",
+      titleLine1: "Tether",
+      titleLine2: "Agent Harness",
       subtitle:
-        "Turn model reasoning into verified, reviewable repository changes. Native chain-of-thought streaming, transactional /undo rollback, and built-in MinerU local OCR — 100% running on your machine.",
+        "Turn model reasoning into precise, safe, reviewable repository changes. Streaming chain-of-thought, transactional /undo, built-in MinerU OCR — 100% on your machine.",
       primaryCtaMac: "Download for macOS (Apple Silicon)",
       primaryCtaWin: "Download for Windows (x64)",
       primaryCtaGeneric: "Download Desktop App",
       secondaryCta: "View GitHub Repo",
       stats: {
         privacy: "100% Local 0600 Encrypted Storage",
-        models: "DeepSeek / OneAPI / Ollama",
+        models: "Open gateways · Ollama · Custom APIs",
         undo: "Atomic /undo File Snapshot Rollback",
         license: "MIT Licensed",
       },
@@ -263,7 +264,7 @@ export const locales = {
     productPreview: {
       tag: "Interface",
       title: "Focused & Responsive Local AI Coding Workspace",
-      subtitle: "Clear visibility into DeepSeek reasoning traces, AST search, live patching, and snapshot rollbacks.",
+      subtitle: "Clear visibility into reasoning traces, AST search, live patching, and snapshot rollbacks.",
     },
     download: {
       tag: "Desktop Installers",
@@ -272,24 +273,25 @@ export const locales = {
       macArm: {
         title: "macOS (Apple Silicon)",
         desc: "For Mac machines with M1 / M2 / M3 / M4 / M5 chips",
-        file: "Tether_0.1.0_arm64.dmg",
-        size: "~96 MB",
+        file: "Tether-0.1.0-arm64.dmg",
+        size: "~130 MB",
         badge: "Recommended",
       },
       macIntel: {
         title: "macOS (Intel)",
         desc: "For legacy Intel x86_64 Mac computers",
-        file: "Tether_0.1.0_x64.dmg",
-        size: "~102 MB",
+        file: "Intel build not available yet",
+        size: "—",
       },
       win: {
         title: "Windows (x64)",
         desc: "For Windows 10 and Windows 11 64-bit editions",
-        file: "Tether_0.1.0_x64-setup.exe",
-        size: "~88 MB",
+        file: "Tether-Setup-0.1.0.exe",
+        size: "~114 MB",
         badge: "Win 10/11",
       },
-      notice: "Note: macOS packages are Developer ID signed and notarized by Apple. Windows packages run in local sandboxes.",
+      notice:
+        "Note: macOS builds are development-signed. If Gatekeeper blocks open, right-click → Open, or run xattr -cr /Applications/Tether.app. On Windows, if SmartScreen appears, choose More info → Run anyway.",
     },
     architecture: {
       tag: "Architecture",
@@ -445,7 +447,7 @@ export const locales = {
       cta: "Submit an Issue on GitHub ↗",
     },
     footer: {
-      tagline: "Coding agent powered by DeepSeek and Local Harness",
+      tagline: "Open-source, local-first Agent Harness",
       builtWith: "Built with a focus on developer autonomy and craftsmanship.",
       colProduct: "Product",
       colResources: "Resources",

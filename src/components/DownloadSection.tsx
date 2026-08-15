@@ -1,3 +1,4 @@
+import { DOWNLOADS } from "../downloads";
 import { locales } from "../locales";
 import type { Language } from "../types";
 
@@ -29,7 +30,7 @@ export function DownloadSection({ lang }: { lang: Language }) {
               <span className="file-size">{t.macArm.size}</span>
             </div>
             <a
-              href="https://github.com/tt-11-dd/tether-ai/releases"
+              href={DOWNLOADS.macArm}
               target="_blank"
               rel="noreferrer"
               className="card-download-btn primary"
@@ -40,15 +41,8 @@ export function DownloadSection({ lang }: { lang: Language }) {
               <span>{lang === "zh" ? "下载 macOS .DMG 安装包" : "Download macOS .DMG"}</span>
             </a>
             <div className="card-sub-option">
-              <span className="sub-opt-hint">{lang === "zh" ? "Intel 架构 Mac 用户：" : "For Intel Macs: "}</span>
-              <a
-                href="https://github.com/tt-11-dd/tether-ai/releases"
-                target="_blank"
-                rel="noreferrer"
-                className="sub-opt-link"
-              >
-                {t.macIntel.file} ({t.macIntel.size}) ↗
-              </a>
+              <span className="sub-opt-hint">{lang === "zh" ? "Intel 架构 Mac：" : "Intel Macs: "}</span>
+              <span className="sub-opt-text">{t.macIntel.file}</span>
             </div>
           </div>
 
@@ -67,7 +61,7 @@ export function DownloadSection({ lang }: { lang: Language }) {
               <span className="file-size">{t.win.size}</span>
             </div>
             <a
-              href="https://github.com/tt-11-dd/tether-ai/releases"
+              href={DOWNLOADS.win}
               target="_blank"
               rel="noreferrer"
               className="card-download-btn primary"

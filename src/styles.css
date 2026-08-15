@@ -431,12 +431,12 @@ code, pre {
 
 .hero-line1 {
   display: block;
-  color: var(--ink-primary);
+  color: var(--brand);
 }
 
 .hero-line2 {
   display: block;
-  color: var(--brand);
+  color: var(--ink-primary);
 }
 
 .hero-subtitle {
