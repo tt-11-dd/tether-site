@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import logo from "../assets/logo.svg";
+import { RELEASE_TAG } from "../downloads";
 import { locales } from "../locales";
 import type { Language } from "../types";
 
@@ -41,7 +42,7 @@ export function Header({
         <a href="#" className="brand-link" onClick={() => setMobileMenuOpen(false)}>
           <img src={logo} alt="Tether Logo" className="brand-logo" width="34" height="20" />
           <span className="brand-name">Tether</span>
-          <span className="brand-badge">v0.1.1</span>
+          <span className="brand-badge">{RELEASE_TAG}</span>
         </a>
 
         {/* 桌面端主导航 */}

@@ -1,4 +1,4 @@
-import { DOWNLOADS } from "../downloads";
+import { DOWNLOADS, MAC_ARM_FILE, WIN_FILE } from "../downloads";
 import { locales } from "../locales";
 import type { Language } from "../types";
 
@@ -26,7 +26,7 @@ export function DownloadSection({ lang }: { lang: Language }) {
             <h3 className="card-title">{t.macArm.title}</h3>
             <p className="card-desc">{t.macArm.desc}</p>
             <div className="card-meta">
-              <span className="file-name">{t.macArm.file}</span>
+              <span className="file-name">{MAC_ARM_FILE}</span>
               <span className="file-size">{t.macArm.size}</span>
             </div>
             <a
@@ -57,7 +57,7 @@ export function DownloadSection({ lang }: { lang: Language }) {
             <h3 className="card-title">{t.win.title}</h3>
             <p className="card-desc">{t.win.desc}</p>
             <div className="card-meta">
-              <span className="file-name">{t.win.file}</span>
+              <span className="file-name">{WIN_FILE}</span>
               <span className="file-size">{t.win.size}</span>
             </div>
             <a

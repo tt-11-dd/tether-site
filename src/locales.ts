@@ -39,7 +39,6 @@ export const locales = {
       macArm: {
         title: "macOS (Apple Silicon)",
         desc: "适用于 M1 / M2 / M3 / M4 / M5 芯片的 Mac 电脑",
-        file: "Tether-0.1.1-arm64.dmg",
         size: "约 130 MB",
         badge: "推荐",
       },
@@ -52,7 +51,6 @@ export const locales = {
       win: {
         title: "Windows (x64)",
         desc: "适用于 Windows 10 / Windows 11 64位系统",
-        file: "Tether-Setup-0.1.1.exe",
         size: "约 114 MB",
         badge: "Win 10/11",
       },
@@ -271,7 +269,6 @@ export const locales = {
       macArm: {
         title: "macOS (Apple Silicon)",
         desc: "For Mac machines with M1 / M2 / M3 / M4 / M5 chips",
-        file: "Tether-0.1.1-arm64.dmg",
         size: "~130 MB",
         badge: "Recommended",
       },
@@ -284,7 +281,6 @@ export const locales = {
       win: {
         title: "Windows (x64)",
         desc: "For Windows 10 and Windows 11 64-bit editions",
-        file: "Tether-Setup-0.1.1.exe",
         size: "~114 MB",
         badge: "Win 10/11",
       },

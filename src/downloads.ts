@@ -1,11 +1,17 @@
-/** GitHub Release assets for Tether Desktop v0.1.1 */
-export const RELEASE_TAG = "v0.1.1";
+import pkg from "../package.json";
+
+/** Keep in sync with tether-site/package.json — bump that version to retarget GitHub Release assets. */
+export const APP_VERSION = pkg.version;
+export const RELEASE_TAG = `v${APP_VERSION}`;
+
+export const MAC_ARM_FILE = `Tether-${APP_VERSION}-arm64.dmg`;
+export const WIN_FILE = `Tether-Setup-${APP_VERSION}.exe`;
+
+const assetBase = `https://github.com/tt-11-dd/tether-ai/releases/download/${RELEASE_TAG}`;
 
 export const DOWNLOADS = {
-  macArm:
-    "https://github.com/tt-11-dd/tether-ai/releases/download/v0.1.1/Tether-0.1.1-arm64.dmg",
-  win:
-    "https://github.com/tt-11-dd/tether-ai/releases/download/v0.1.1/Tether-Setup-0.1.1.exe",
-  page: "https://github.com/tt-11-dd/tether-ai/releases/tag/v0.1.1",
+  macArm: `${assetBase}/${MAC_ARM_FILE}`,
+  win: `${assetBase}/${WIN_FILE}`,
+  page: `https://github.com/tt-11-dd/tether-ai/releases/tag/${RELEASE_TAG}`,
   all: "https://github.com/tt-11-dd/tether-ai/releases",
 } as const;
