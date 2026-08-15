@@ -1,10 +1,11 @@
 import logo from "../assets/logo.svg";
-import { DOWNLOADS } from "../downloads";
 import { locales } from "../locales";
 import type { Language } from "../types";
+import { useLatestDownloads } from "../useLatestDownloads";
 
 export function Footer({ lang }: { lang: Language }) {
   const t = locales[lang].footer;
+  const downloads = useLatestDownloads();
 
   return (
     <footer className="site-footer">
@@ -25,7 +26,7 @@ export function Footer({ lang }: { lang: Language }) {
               <li><a href="#download">{t.links.desktop}</a></li>
               <li><a href="#features">{t.links.features}</a></li>
               <li>
-                <a href={DOWNLOADS.page} target="_blank" rel="noreferrer">
+                <a href={downloads.page} target="_blank" rel="noreferrer">
                   {t.links.changelog} ↗
                 </a>
               </li>

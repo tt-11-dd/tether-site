@@ -1,9 +1,10 @@
-import { DOWNLOADS, MAC_ARM_FILE, WIN_FILE } from "../downloads";
 import { locales } from "../locales";
 import type { Language } from "../types";
+import { useLatestDownloads } from "../useLatestDownloads";
 
 export function DownloadSection({ lang }: { lang: Language }) {
   const t = locales[lang].download;
+  const downloads = useLatestDownloads();
 
   return (
     <section id="download" className="download-section">
@@ -15,7 +16,6 @@ export function DownloadSection({ lang }: { lang: Language }) {
         </div>
 
         <div className="download-grid two-cols">
-          {/* macOS Apple Silicon */}
           <div className="download-card featured">
             {t.macArm.badge && <span className="card-badge">{t.macArm.badge}</span>}
             <div className="card-os-icon apple">
@@ -26,11 +26,11 @@ export function DownloadSection({ lang }: { lang: Language }) {
             <h3 className="card-title">{t.macArm.title}</h3>
             <p className="card-desc">{t.macArm.desc}</p>
             <div className="card-meta">
-              <span className="file-name">{MAC_ARM_FILE}</span>
+              <span className="file-name">{downloads.macArmFile}</span>
               <span className="file-size">{t.macArm.size}</span>
             </div>
             <a
-              href={DOWNLOADS.macArm}
+              href={downloads.macArm}
               target="_blank"
               rel="noreferrer"
               className="card-download-btn primary"
@@ -46,7 +46,6 @@ export function DownloadSection({ lang }: { lang: Language }) {
             </div>
           </div>
 
-          {/* Windows x64 */}
           <div className="download-card featured">
             {t.win.badge && <span className="card-badge win">{t.win.badge}</span>}
             <div className="card-os-icon windows">
@@ -57,11 +56,11 @@ export function DownloadSection({ lang }: { lang: Language }) {
             <h3 className="card-title">{t.win.title}</h3>
             <p className="card-desc">{t.win.desc}</p>
             <div className="card-meta">
-              <span className="file-name">{WIN_FILE}</span>
+              <span className="file-name">{downloads.winFile}</span>
               <span className="file-size">{t.win.size}</span>
             </div>
             <a
-              href={DOWNLOADS.win}
+              href={downloads.win}
               target="_blank"
               rel="noreferrer"
               className="card-download-btn primary"

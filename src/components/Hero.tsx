@@ -1,10 +1,11 @@
 import { useState, useEffect } from "react";
-import { DOWNLOADS } from "../downloads";
 import { locales } from "../locales";
 import type { Language } from "../types";
+import { useLatestDownloads } from "../useLatestDownloads";
 
 export function Hero({ lang }: { lang: Language }) {
   const t = locales[lang].hero;
+  const downloads = useLatestDownloads();
   const [detectedOs, setDetectedOs] = useState<"mac" | "win" | "linux">("mac");
 
   useEffect(() => {
@@ -25,7 +26,7 @@ export function Hero({ lang }: { lang: Language }) {
   };
 
   const primaryHref =
-    detectedOs === "win" ? DOWNLOADS.win : detectedOs === "mac" ? DOWNLOADS.macArm : "#download";
+    detectedOs === "win" ? downloads.win : detectedOs === "mac" ? downloads.macArm : "#download";
 
   return (
     <section className="hero-section">

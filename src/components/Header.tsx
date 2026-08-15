@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react";
 import logo from "../assets/logo.svg";
-import { RELEASE_TAG } from "../downloads";
 import { locales } from "../locales";
 import type { Language } from "../types";
+import { useLatestDownloads } from "../useLatestDownloads";
 
 export function Header({
   lang,
@@ -14,6 +14,7 @@ export function Header({
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const t = locales[lang].nav;
+  const downloads = useLatestDownloads();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -42,7 +43,7 @@ export function Header({
         <a href="#" className="brand-link" onClick={() => setMobileMenuOpen(false)}>
           <img src={logo} alt="Tether Logo" className="brand-logo" width="34" height="20" />
           <span className="brand-name">Tether</span>
-          <span className="brand-badge">{RELEASE_TAG}</span>
+          {downloads.tag ? <span className="brand-badge">{downloads.tag}</span> : null}
         </a>
 
         {/* 桌面端主导航 */}
