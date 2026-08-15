@@ -30,11 +30,6 @@ export function Hero({ lang }: { lang: Language }) {
   return (
     <section className="hero-section">
       <div className="container hero-container">
-        <div className="hero-badge">
-          <span className="badge-dot" />
-          <span>{t.badge}</span>
-        </div>
-
         <h1 className="hero-title">
           <span className="hero-line1">{t.titleLine1}</span>
           <span className="hero-line2">{t.titleLine2}</span>
