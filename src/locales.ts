@@ -61,6 +61,11 @@ export const locales = {
       tag: "Harness Engineering",
       title: "驾驭工程：让 Agent 稳定干活的那一层",
       subtitle: "模型负责推理。Harness 负责环境、意图、约束与反馈回路——人类掌舵，Agent 执行。Tether 在 Pi 的 coding-agent 循环上补齐权限、沙箱、会话与桌面可观测性，而不是重写一条自研内核。",
+      name: {
+        tag: "Why Tether",
+        title: "Tether /ˈteð.ər/ · 系绳、锚点、牵引",
+        body: "比 Harness（马具）更轻。大模型在你配置的端点上推理，像一根没系住的线；桌面端把它拴在本地仓库上，让改动看得见、权限收得住、上一轮可以用 /undo 拉回来。",
+      },
       items: [
         {
           kicker: "Agent Loop",
@@ -328,6 +333,11 @@ export const locales = {
       tag: "Harness Engineering",
       title: "The layer that steers the agent, not the chat box",
       subtitle: "The model reasons. A harness designs the environment, intent, constraints, and feedback loops — humans steer, agents execute. Tether layers permissions, sandbox, session, and desktop observability on Pi’s coding-agent loop instead of claiming a proprietary kernel.",
+      name: {
+        tag: "Why Tether",
+        title: "Tether /ˈteð.ər/ · a rope, an anchor, a pull",
+        body: "Lighter than harness (tack). The model reasons at the endpoint you configure, like a loose line; the desktop app ties it to your local repo so diffs stay visible, permissions stay tight, and /undo can pull the last turn back.",
+      },
       items: [
         {
           kicker: "Agent Loop",

@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import logo from "../assets/logo.svg";
+import { TetherLogo } from "./TetherLogo";
 import { locales } from "../locales";
 import type { Language } from "../types";
 
@@ -40,7 +40,7 @@ export function Header({
     <header className={`site-header ${scrolled ? "scrolled" : ""} ${mobileMenuOpen ? "menu-open" : ""}`}>
       <div className="header-inner container">
         <a href="#" className="brand-link" onClick={() => setMobileMenuOpen(false)}>
-          <img src={logo} alt="Tether Logo" className="brand-logo" width="34" height="20" />
+          <TetherLogo className="brand-logo" width={34} height={20} />
           <span className="brand-name">Tether</span>
         </a>
 

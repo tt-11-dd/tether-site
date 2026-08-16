@@ -1,4 +1,4 @@
-import logo from "../assets/logo.svg";
+import { TetherLogo } from "./TetherLogo";
 import { locales } from "../locales";
 import type { Language } from "../types";
 import { useLatestDownloads } from "../useLatestDownloads";
@@ -12,7 +12,7 @@ export function Footer({ lang }: { lang: Language }) {
       <div className="container footer-container">
         <div className="footer-brand-col">
           <div className="footer-logo-row">
-            <img src={logo} alt="Tether" width="32" height="18" />
+            <TetherLogo className="footer-logo" width={32} height={18} />
             <span className="footer-brand-name">Tether</span>
           </div>
           <p className="footer-tagline">{t.tagline}</p>

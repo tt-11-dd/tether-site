@@ -138,6 +138,33 @@ code, pre {
   display: flex;
   align-items: center;
   gap: 8px;
+  color: #8a6f5a;
+}
+
+.tether-logo {
+  display: block;
+  overflow: visible;
+}
+
+.tether-logo-base,
+.tether-logo-flow {
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 5.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.tether-logo-base {
+  opacity: 0.28;
+}
+
+.tether-logo-flow {
+  opacity: 1;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .tether-logo-base { opacity: 1; }
 }
 
 .brand-name {
@@ -933,6 +960,36 @@ code, pre {
   padding: 64px 0;
 }
 
+.name-origin {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  max-width: 760px;
+  margin: 0 auto 28px;
+  padding: 22px 24px;
+  background: var(--bg-card);
+  border: 1px solid var(--line-subtle);
+  border-radius: 12px;
+}
+
+.name-origin-logo {
+  flex-shrink: 0;
+  color: var(--brand);
+}
+
+.name-origin-title {
+  font-size: 18px;
+  font-weight: 700;
+  margin: 6px 0 8px;
+}
+
+.name-origin-body {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--ink-secondary);
+}
+
 .harness-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -1332,6 +1389,7 @@ code, pre {
   align-items: center;
   gap: 8px;
   margin-bottom: 12px;
+  color: #c4b5a5;
 }
 
 .footer-brand-name {
@@ -1471,6 +1529,12 @@ code, pre {
 
   .harness-grid {
     grid-template-columns: 1fr;
+  }
+
+  .name-origin {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
   }
 
   .section-title {

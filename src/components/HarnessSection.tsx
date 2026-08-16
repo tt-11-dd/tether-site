@@ -1,5 +1,6 @@
 import { locales } from "../locales";
 import type { Language } from "../types";
+import { TetherLogo } from "./TetherLogo";
 
 export function HarnessSection({ lang }: { lang: Language }) {
   const t = locales[lang].harness;
@@ -12,6 +13,14 @@ export function HarnessSection({ lang }: { lang: Language }) {
           <h2 className="section-title">{t.title}</h2>
           <p className="section-subtitle">{t.subtitle}</p>
         </div>
+        <aside className="name-origin">
+          <TetherLogo width={72} height={42} className="name-origin-logo" />
+          <div>
+            <span className="section-tag">{t.name.tag}</span>
+            <h3 className="name-origin-title">{t.name.title}</h3>
+            <p className="name-origin-body">{t.name.body}</p>
+          </div>
+        </aside>
         <div className="harness-grid">
           {t.items.map((item) => (
             <article key={item.kicker} className="harness-card">
