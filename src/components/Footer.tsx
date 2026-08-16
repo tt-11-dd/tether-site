@@ -41,7 +41,7 @@ export function Footer({ lang }: { lang: Language }) {
                   {t.links.docs} ↗
                 </a>
               </li>
-              <li><a href="#architecture">{t.links.harness}</a></li>
+              <li><a href="#harness">{t.links.harness}</a></li>
               <li><a href="#comparison">{locales[lang].nav.comparison}</a></li>
             </ul>
           </div>
@@ -71,7 +71,7 @@ export function Footer({ lang }: { lang: Language }) {
 
       <div className="footer-bottom container">
         <p className="copyright">{t.copyright}</p>
-        <p className="open-source-note">Open Source under MIT License · Local-First Workbench · Built on Pi</p>
+        <p className="open-source-note">Open Source under MIT License · Built on Pi</p>
       </div>
     </footer>
   );

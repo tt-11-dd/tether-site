@@ -4,6 +4,7 @@ import { Hero } from "./components/Hero";
 import { ProductPreview } from "./components/ProductPreview";
 import { DownloadSection } from "./components/DownloadSection";
 import { ArchitectureSection } from "./components/ArchitectureSection";
+import { HarnessSection } from "./components/HarnessSection";
 import { FeaturesGrid } from "./components/FeaturesGrid";
 import { QuickstartSection } from "./components/QuickstartSection";
 import { ComparisonSection } from "./components/ComparisonSection";
@@ -26,6 +27,7 @@ export function App() {
         <Hero lang={lang} />
         <ProductPreview lang={lang} />
         <DownloadSection lang={lang} />
+        <HarnessSection lang={lang} />
         <ArchitectureSection lang={lang} />
         <FeaturesGrid lang={lang} />
         <QuickstartSection lang={lang} />

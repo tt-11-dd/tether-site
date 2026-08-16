@@ -4,6 +4,7 @@ export const locales = {
       downloads: "下载",
       features: "核心特性",
       architecture: "开放架构",
+      harness: "Harness",
       quickstart: "快速上手",
       comparison: "方案对比",
       faq: "常见问题",
@@ -13,7 +14,6 @@ export const locales = {
     },
     hero: {
       titleLine1: "Tether",
-      titleLine2: "本地优先工作台",
       subtitle:
         "基于 Pi Agent 生态构建，把 DeepSeek 与兼容模型的推理变成可见、可控、可撤销的代码改动。会话与工作区数据留在本机，模型请求直达你配置的端点。",
       primaryCtaMac: "下载 macOS 版 (Apple Silicon)",
@@ -35,7 +35,7 @@ export const locales = {
     download: {
       tag: "桌面版安装包",
       title: "下载 Tether Desktop 客户端",
-      subtitle: "专为 macOS 与 Windows 打造，享受本地优先的独立工作区与极致响应速度。",
+      subtitle: "专为 macOS 与 Windows 打造的桌面客户端，工作区与会话在本机。",
       macArm: {
         title: "macOS (Apple Silicon)",
         desc: "适用于 M1 / M2 / M3 / M4 / M5 芯片的 Mac 电脑",
@@ -56,6 +56,38 @@ export const locales = {
       },
       notice:
         "注：当前 macOS 为开发签名包，若提示无法打开可右键「打开」，或执行 xattr -cr /Applications/Tether.app；Windows 首次运行若遇 SmartScreen，点击「更多信息 → 仍要运行」即可。",
+    },
+    harness: {
+      tag: "Harness Engineering",
+      title: "驾驭工程：让 Agent 稳定干活的那一层",
+      subtitle: "模型负责推理。Harness 负责环境、意图、约束与反馈回路——人类掌舵，Agent 执行。Tether 在 Pi 的 coding-agent 循环上补齐权限、沙箱、会话与桌面可观测性，而不是重写一条自研内核。",
+      items: [
+        {
+          kicker: "Agent Loop",
+          title: "工具循环 · Context Window",
+          desc: "提示、工具结果与下一次调用串在同一轮。上下文窗口有限，所以要 compaction、按轮停下和审批，而不是指望一次把仓库做完。",
+        },
+        {
+          kicker: "Context Engineering",
+          title: "上下文工程",
+          desc: "给 Agent 一张地图，而不是整本百科。AGENTS.md、Skills、MCP 与 @ 文件引用做渐进披露，让仓库对 Agent 可读、可导航。",
+        },
+        {
+          kicker: "Constraints",
+          title: "约束与强制执行",
+          desc: "Plan / Ask / Workspace / Full 加上 OS 沙箱，把能做的边界写成可执行规则。缺的不是「再努力一点」，而是对 Agent 既清晰可读又可强制执行的能力。",
+        },
+        {
+          kicker: "Feedback Loop",
+          title: "反馈回路与长程任务",
+          desc: "工具输出、测试、Diff 与 Checkpoint 构成闭环；/compact 压缩旧对话，进度文件与检查点把工作留给下一扇窗口，避免半截实现和过早宣布完成。",
+        },
+      ],
+      note: "术语对齐 OpenAI 的 Harness Engineering（设计环境、意图与反馈回路）和 Anthropic 对 long-running agent harness 的实践（跨 context window 的增量进度与干净状态）。循环来自 Pi；Tether 做权限、沙箱、Checkpoint 与桌面层。",
+      sources: [
+        { label: "OpenAI · Harness Engineering", href: "https://openai.com/zh-Hans-CN/index/harness-engineering" },
+        { label: "Anthropic · Long-running agents", href: "https://www.anthropic.com/engineering/effective-harnesses-for-long-running-agents" },
+      ],
     },
     architecture: {
       tag: "开放架构",
@@ -216,7 +248,7 @@ export const locales = {
       cta: "在 GitHub Issues 反馈问题 ↗",
     },
     footer: {
-      tagline: "基于 Pi 生态的本地优先 Agent 工作台",
+      tagline: "基于 Pi 生态的桌面 Agent 工作台",
       builtWith: "Pi 提供基础，Tether 负责安全边界与桌面体验。",
       colProduct: "产品",
       colResources: "资源",
@@ -226,7 +258,7 @@ export const locales = {
         features: "功能特性",
         changelog: "更新日志",
         docs: "开发文档",
-        harness: "开放架构",
+        harness: "Harness",
         github: "GitHub 仓库",
         issues: "提交反馈 (Issues)",
         license: "MIT 许可证",
@@ -239,6 +271,7 @@ export const locales = {
       downloads: "Downloads",
       features: "Features",
       architecture: "Architecture",
+      harness: "Harness",
       quickstart: "Quickstart",
       comparison: "Compare",
       faq: "FAQ",
@@ -248,7 +281,6 @@ export const locales = {
     },
     hero: {
       titleLine1: "Tether",
-      titleLine2: "Local-First Workbench",
       subtitle:
         "Built on the Pi agent ecosystem, Tether turns DeepSeek and compatible models into visible, controlled, recoverable repository changes. Sessions stay local; model requests go directly to your endpoint.",
       primaryCtaMac: "Download for macOS (Apple Silicon)",
@@ -270,7 +302,7 @@ export const locales = {
     download: {
       tag: "Desktop Installers",
       title: "Download Tether Desktop",
-      subtitle: "Dedicated builds for macOS and Windows with local-first workspaces and instant responsiveness.",
+      subtitle: "Desktop builds for macOS and Windows. Workspace and sessions stay on your machine.",
       macArm: {
         title: "macOS (Apple Silicon)",
         desc: "For Mac machines with M1 / M2 / M3 / M4 / M5 chips",
@@ -291,6 +323,38 @@ export const locales = {
       },
       notice:
         "Note: macOS builds are development-signed. If Gatekeeper blocks open, right-click → Open, or run xattr -cr /Applications/Tether.app. On Windows, if SmartScreen appears, choose More info → Run anyway.",
+    },
+    harness: {
+      tag: "Harness Engineering",
+      title: "The layer that steers the agent, not the chat box",
+      subtitle: "The model reasons. A harness designs the environment, intent, constraints, and feedback loops — humans steer, agents execute. Tether layers permissions, sandbox, session, and desktop observability on Pi’s coding-agent loop instead of claiming a proprietary kernel.",
+      items: [
+        {
+          kicker: "Agent Loop",
+          title: "Tool loop · Context window",
+          desc: "Prompts, tool results, and the next call stay in one turn. Context windows are finite, so compaction, stop, and approval matter more than trying to finish the repo in one shot.",
+        },
+        {
+          kicker: "Context Engineering",
+          title: "Context engineering",
+          desc: "Give the agent a map, not an encyclopedia. AGENTS.md, Skills, MCP, and @ mentions are progressive disclosure so the repo is agent-readable and navigable.",
+        },
+        {
+          kicker: "Constraints",
+          title: "Constraints you can enforce",
+          desc: "Plan / Ask / Workspace / Full plus an OS sandbox turn boundaries into executable rules. Progress usually means adding a capability that is both readable and enforceable for the agent — not “try harder”.",
+        },
+        {
+          kicker: "Feedback Loop",
+          title: "Feedback loops & long-horizon work",
+          desc: "Tool output, tests, diffs, and checkpoints close the loop. /compact shrinks old turns; progress files and checkpoints leave a clean state for the next context window, instead of half-built features or a false “done”.",
+        },
+      ],
+      note: "Vocabulary follows OpenAI’s Harness Engineering (environment, intent, feedback loops) and Anthropic’s long-running agent harness (incremental progress across context windows, clean state). The loop comes from Pi; Tether adds permissions, sandbox, checkpoints, and the desktop layer.",
+      sources: [
+        { label: "OpenAI · Harness Engineering", href: "https://openai.com/index/harness-engineering" },
+        { label: "Anthropic · Long-running agents", href: "https://www.anthropic.com/engineering/effective-harnesses-for-long-running-agents" },
+      ],
     },
     architecture: {
       tag: "Open Architecture",
@@ -451,7 +515,7 @@ export const locales = {
       cta: "Submit an Issue on GitHub ↗",
     },
     footer: {
-      tagline: "A local-first agent workbench built on Pi",
+      tagline: "A desktop agent workbench built on Pi",
       builtWith: "Pi provides the foundation; Tether defines the safety boundary and desktop experience.",
       colProduct: "Product",
       colResources: "Resources",
@@ -461,7 +525,7 @@ export const locales = {
         features: "Features",
         changelog: "Changelog",
         docs: "Documentation",
-        harness: "Architecture",
+        harness: "Harness",
         github: "GitHub Repository",
         issues: "Feedback & Issues",
         license: "MIT License",
