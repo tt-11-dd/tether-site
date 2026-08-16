@@ -35,10 +35,7 @@ export function Hero({ lang }: { lang: Language }) {
           <span className="hero-line1">{t.titleLine1}</span>
         </h1>
 
-        <p className="hero-subtitle">
-          <span className="hero-subtitle-lead">{t.subtitle}</span>
-          <span className="hero-subtitle-desc">{t.subtitleDesc}</span>
-        </p>
+        <p className="hero-subtitle">{t.subtitle}</p>
 
         <div className="hero-actions">
           <a

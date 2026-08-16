@@ -13,8 +13,8 @@ export const locales = {
     },
     hero: {
       titleLine1: "Tether",
-      subtitle: "基于 Pi 生态构建的私有 AI 编程工作台",
-      subtitleDesc: "让 DeepSeek 与 OpenAI 兼容模型安全地阅读、修改和验证你的代码仓库。",
+      subtitle:
+        "基于 Pi Agent 生态构建，把 DeepSeek 与兼容模型的推理变成可见、可控、可撤销的代码改动。会话与工作区数据留在本机，模型请求直达你配置的端点。",
       primaryCtaMac: "下载 macOS 版 (Apple Silicon)",
       primaryCtaWin: "下载 Windows 版 (x64)",
       primaryCtaGeneric: "下载桌面安装包",
@@ -34,7 +34,7 @@ export const locales = {
     download: {
       tag: "桌面版安装包",
       title: "下载 Tether Desktop 客户端",
-      subtitle: "专为 macOS 与 Windows 打造，独立工作区，极致响应速度。",
+      subtitle: "专为 macOS 与 Windows 打造，享受本地优先的独立工作区与极致响应速度。",
       macArm: {
         title: "macOS (Apple Silicon)",
         desc: "适用于 M1 / M2 / M3 / M4 / M5 芯片的 Mac 电脑",
@@ -210,7 +210,7 @@ export const locales = {
       cta: "在 GitHub Issues 反馈问题 ↗",
     },
     footer: {
-      tagline: "基于 Pi 生态的 Agent 工作台",
+      tagline: "基于 Pi 生态的本地优先 Agent 工作台",
       builtWith: "Pi 提供基础，Tether 负责安全边界与桌面体验。",
       colProduct: "产品",
       colResources: "资源",
@@ -242,9 +242,8 @@ export const locales = {
     },
     hero: {
       titleLine1: "Tether",
-      subtitle: "A private AI coding workbench built on the Pi ecosystem",
-      subtitleDesc:
-        "Let DeepSeek and OpenAI-compatible models safely read, modify, and verify your code repository.",
+      subtitle:
+        "Built on the Pi agent ecosystem, Tether turns DeepSeek and compatible models into visible, controlled, recoverable repository changes. Sessions stay local; model requests go directly to your endpoint.",
       primaryCtaMac: "Download for macOS (Apple Silicon)",
       primaryCtaWin: "Download for Windows (x64)",
       primaryCtaGeneric: "Download Desktop App",
@@ -264,7 +263,7 @@ export const locales = {
     download: {
       tag: "Desktop Installers",
       title: "Download Tether Desktop",
-      subtitle: "Dedicated builds for macOS and Windows with private workspaces and instant responsiveness.",
+      subtitle: "Dedicated builds for macOS and Windows with local-first workspaces and instant responsiveness.",
       macArm: {
         title: "macOS (Apple Silicon)",
         desc: "For Mac machines with M1 / M2 / M3 / M4 / M5 chips",
@@ -440,7 +439,7 @@ export const locales = {
       cta: "Submit an Issue on GitHub ↗",
     },
     footer: {
-      tagline: "An agent workbench built on Pi",
+      tagline: "A local-first agent workbench built on Pi",
       builtWith: "Pi provides the foundation; Tether defines the safety boundary and desktop experience.",
       colProduct: "Product",
       colResources: "Resources",
