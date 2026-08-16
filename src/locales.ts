@@ -3,7 +3,7 @@ export const locales = {
     nav: {
       downloads: "下载",
       features: "核心特性",
-      architecture: "Harness 架构",
+      architecture: "开放架构",
       quickstart: "快速上手",
       comparison: "方案对比",
       faq: "常见问题",
@@ -13,24 +13,24 @@ export const locales = {
     },
     hero: {
       titleLine1: "Tether",
-      titleLine2: "Agent Harness",
+      titleLine2: "本地优先工作台",
       subtitle:
-        "把大模型的推理与规划，变为精准、安全、可审查的代码改动。原生思维链展示、事务级 /undo 撤销、内置 MinerU 本地 OCR，100% 运行在你的机器上。",
+        "基于 Pi Agent 生态与 npm 包 tether-agent-core 构建，把 DeepSeek 与兼容模型的推理变成可见、可控、可撤销的代码改动。会话与工作区数据留在本机，模型请求直达你配置的端点。",
       primaryCtaMac: "下载 macOS 版 (Apple Silicon)",
       primaryCtaWin: "下载 Windows 版 (x64)",
       primaryCtaGeneric: "下载桌面安装包",
       secondaryCta: "查看 GitHub 源码",
       stats: {
-        privacy: "100% 本地 0600 权限存储",
-        models: "开放网关 · Ollama · 自定义 API",
-        undo: "原子级 /undo 文件快照回滚",
-        license: "MIT 开源协议",
+        privacy: "本地会话 · 无 Tether 云端中转",
+        models: "DeepSeek · Ollama · 自定义网关",
+        undo: "Checkpoint · /undo 文件恢复",
+        license: "基于 Pi 生态 · MIT",
       },
     },
     productPreview: {
       tag: "工作台界面",
-      title: "专注、高效的本地 AI 编程工作区",
-      subtitle: "直观展示思考链推导、文件检索、实时代码打补丁与快照撤销。",
+      title: "看得见 Agent 在仓库里做了什么",
+      subtitle: "统一展示推理状态、工具调用、终端输出、文件 Diff 与检查点恢复。",
     },
     download: {
       tag: "桌面版安装包",
@@ -58,49 +58,49 @@ export const locales = {
         "注：当前 macOS 为开发签名包，若提示无法打开可右键「打开」，或执行 xattr -cr /Applications/Tether.app；Windows 首次运行若遇 SmartScreen，点击「更多信息 → 仍要运行」即可。",
     },
     architecture: {
-      tag: "架构解析",
-      title: "什么是 Tether Agent Harness？",
-      subtitle: "大模型擅长推理生成，而 Tether Harness 为其赋予真实代码库中的双眼、双手与安全护栏。",
+      tag: "开放架构",
+      title: "Pi 提供 Agent 基础，Tether 负责安全落地",
+      subtitle: "我们明确区分上游基础能力与 Tether 自己的产品层，不把开源依赖包装成自研内核。",
       step1: {
-        title: "1. DeepSeek 推理引擎",
-        desc: "由 DeepSeek V3 / R1 或私有模型提供高强度逻辑推理、任务拆解与补丁草案编写。",
+        title: "1. Pi Agent 生态",
+        desc: "复用 Agent 状态与工具循环、模型协议、Coding Agent 扩展与 RPC，以及 Runtime CLI 的终端组件。",
       },
       step2: {
-        title: "2. Tether Harness 编排层",
-        desc: "注入 AST 代码树、精准 Ripgrep 检索、长上下文智能压缩 (Compaction)、文件检查点快照与 OS 隔离沙箱。",
+        title: "2. tether-agent-core",
+        desc: "在 Pi 上增加 DeepSeek 默认体验、四级权限、工作区工具、OS 沙箱、托管命令、Checkpoint、MCP、Hooks 与 Skills。",
       },
       step3: {
-        title: "3. 精准落地与审查",
-        desc: "输出经过单元测试与类型检查校验的精确 Diff，支持一键审查、一键接受或事务级回滚。",
+        title: "3. Tether Desktop",
+        desc: "Electron 与 React 工作台通过独立 Agent 进程提供项目会话、实时轨迹、Diff 审查、设置与中英文交互。",
       },
     },
     features: {
       tag: "核心特性",
-      title: "专为严苛工程场景打造的 Agent 工具",
-      subtitle: "不只是简单的聊天界面，而是真正深入工程目录、理解大型代码库的专业生产力工具。",
+      title: "在成熟 Agent 基础上，做好边界与体验",
+      subtitle: "Pi 负责通用 Agent 基础，Tether 聚焦 DeepSeek、本地工作区、安全策略和桌面协作。",
       f1: {
-        title: "DeepSeek 深度优化与流式思考",
-        desc: "原生支持 High / Medium / Low 思考强度调节，完整展示思维链推导细节。内置会话压缩算法，超长上下文自动精简，成本降低 80% 以上。",
+        title: "Pi 驱动的 Agent 循环",
+        desc: "基于 pi-agent-core、pi-ai 与 pi-coding-agent 处理消息流、模型调用、工具执行、扩展生命周期和会话。",
       },
       f2: {
-        title: "100% 开放生态，自由连接网关",
-        desc: "支持官方 DeepSeek API，同时无缝兼容 OneAPI、Ollama、vLLM、企业内网代理及兼容 OpenAI 协议的任何端点，无厂商锁定。",
+        title: "DeepSeek 优先，端点保持开放",
+        desc: "支持官方 DeepSeek API、自定义 Base URL、模型发现，以及 OneAPI、Ollama、vLLM 等 OpenAI 兼容端点。",
       },
       f3: {
-        title: "本地优先与原子级 /undo 撤销",
-        desc: "所有会话记录与密钥均保存在本机 ~/.tether（0600 权限），每次代码修改自动生成快照，支持无缝回滚，杜绝破坏性编辑。",
+        title: "本地状态与可恢复改动",
+        desc: "会话、设置和凭据保存在 ~/.tether；补丁会写入文件检查点，上一轮文件改动可通过 /undo 恢复（冲突时默认拒绝覆盖）。",
       },
       f4: {
-        title: "内置 MinerU 本地视觉识别",
-        desc: "内置高精度 MinerU OCR 引擎，无需配置或消耗外部付费 Vision API，即可直接在本地提取报错截图、设计图中的代码与 Markdown 表格。",
+        title: "图片理解与 OCR 流程",
+        desc: "可选 GLM-4V 进行视觉理解，也可调用 MinerU 服务提取图片文本；图片会发送到所选服务，并非离线本地 OCR。",
       },
       f5: {
-        title: "OS 级原生沙箱与安全防护",
-        desc: "终端命令默认在操作系统级隔离沙箱中执行，文件写入自动限制在当前工作区内，任何高危网络访问或破坏性命令均需显式人工确认。",
+        title: "权限模式与 OS 沙箱",
+        desc: "Plan、Ask、Workspace 与 Full 四种权限配合 macOS Seatbelt 和 Windows sandbox helper，越界操作显式审批。",
       },
       f6: {
-        title: "无缝融入现有开发工作流",
-        desc: "自动加载项目根目录下的 AGENTS.md、CLAUDE.md、Skills 规则与 MCP (Model Context Protocol) 协议，完美配合 Git 与团队现有基建。",
+        title: "开放扩展与工程上下文",
+        desc: "支持 AGENTS.md、CLAUDE.md、Agent Skills、MCP 与 Hooks，把团队规则接入同一 Agent 工作流。",
       },
     },
     quickstart: {
@@ -111,7 +111,7 @@ export const locales = {
         num: "01",
         title: "下载并启动 Tether Desktop",
         desc: "根据你的操作系统下载 macOS (.dmg) 或 Windows (.exe) 安装包，安装后双击启动。",
-        action: "支持 macOS (Apple Silicon / Intel) 与 Windows 10/11",
+        action: "支持 macOS Apple Silicon 与 Windows 10/11 x64",
       },
       step2: {
         num: "02",
@@ -123,7 +123,7 @@ export const locales = {
         num: "03",
         title: "打开项目目录，开始协作",
         desc: "点击「打开文件夹」选定代码库，用自然语言提出需求，实时审查生成的代码补丁并随时 /undo 回退。",
-        action: "自带 OS 断网沙箱与原子级 /undo 文件快照保护",
+        action: "权限模式、OS 沙箱与 Checkpoint /undo 保护",
       },
     },
     comparison: {
@@ -137,7 +137,7 @@ export const locales = {
         chatbots: "传统网页对话",
         d1: {
           name: "代码与会话隐私",
-          tether: "100% 存储于本地 (~/.tether 0600)",
+          tether: "会话与配置存储于本机 ~/.tether",
           closed: "代码索引与会话上传云端服务器",
           chat: "代码粘贴至网页，存在数据泄露风险",
         },
@@ -149,25 +149,25 @@ export const locales = {
         },
         d3: {
           name: "代码编辑与执行",
-          tether: "自动化 AST 补丁 + 本地沙箱验证",
+          tether: "工作区补丁 + 工具 + 沙箱命令",
           closed: "插件内局部补全或受限执行",
           chat: "手动复制粘贴，无法执行测试",
         },
         d4: {
           name: "撤销与回滚机制",
-          tether: "事务级原子 /undo 快照瞬间还原",
+          tether: "文件快照 Checkpoint · /undo 恢复",
           closed: "依赖 Ctrl+Z 或 Git 手动回退",
           chat: "无任何工程状态管理",
         },
         d5: {
-          name: "本地视觉识别 (OCR)",
-          tether: "内置 MinerU 免费离线解析截图",
+          name: "图片与 OCR",
+          tether: "可选 GLM-4V + MinerU 服务",
           closed: "按 Token 计费的高昂 Vision API",
           chat: "依赖云端多模态分析",
         },
         d6: {
           name: "开源与商业模式",
-          tether: "MIT 自由开源 · 零订阅门槛",
+          tether: "MIT 开源 · 自带模型端点",
           closed: "月费 $20~$40 闭源商业锁定",
           chat: "高额月费会员制",
         },
@@ -181,27 +181,27 @@ export const locales = {
         {
           question: "Tether 是完全免费且开源的吗？",
           answer:
-            "是的，Tether 采用 MIT 宽松开源协议，核心运行时与桌面客户端完全免费。你可以自由阅读源码、二次开发或在企业内部分发。使用过程中你只需支付自己模型服务商的 API 调用费用（若使用本地 Ollama 则完全零费用）。",
+            "Tether 桌面端和运行时采用 MIT 许可证，不收取软件订阅费。你仍需承担所选模型或 OCR 服务的费用；使用本地兼容模型时可避免模型 API 费用。",
         },
         {
           question: "运行 Tether 需要什么系统与硬件要求？",
           answer:
-            "桌面端支持 macOS 12+ (Apple Silicon M系列及 Intel 芯片) 与 Windows 10/11 64位系统。因为所有推理均在 API 或远程/本地网关完成，Tether 自身极其轻量，普通办公电脑即可流畅运行。",
+            "当前安装包支持 macOS Apple Silicon (arm64) 与 Windows 10/11 x64；暂不提供 Intel Mac 安装包。模型推理由你配置的远程 API 或本地兼容网关完成。",
         },
         {
           question: "我的代码和对话会被上传到 Tether 的服务器吗？",
           answer:
-            "绝不会。Tether 坚守纯粹的 Local-First 原则，我们没有任何收集用户代码或会话的中央服务器。所有配置文件、历史记录、文件快照均存储在你的本机目录 ~/.tether 中，网络请求仅发生在你的机器与你配置的 AI 模型端点之间。",
+            "Tether 不运行遥测或模型中转服务器，配置、会话和检查点保存在本机 ~/.tether。为了完成任务，提示词、相关代码上下文和图片仍会发送到你选择的模型、网关或 OCR 服务；敏感项目可使用本地兼容端点。",
         },
         {
           question: "如何接入公司内网的私有模型（如 Ollama / vLLM）？",
           answer:
-            "在 Tether 设置中，将提供商切换为自定义 OpenAI 兼容接口，填入你的内网 Base URL（如 http://localhost:11434/v1）和对应模型名即可，完全支持离线内网环境运行。",
+            "在 Tether 设置中，将提供商切换为自定义 OpenAI 兼容接口，填入你的内网 Base URL（如 http://localhost:11434/v1）和对应模型名即可。能否完全离线取决于该网关与模型是否支持工具调用。",
         },
         {
           question: "如果 Agent 修改错了代码，我该如何撤销？",
           answer:
-            "在输入框中直接输入 /undo 或点击界面上的回退按钮，Tether 会利用内置的文件级事务检查点系统，一键将所有被触及的文件恢复到执行该操作之前的精确状态。",
+            "在输入框中直接输入 /undo 或点击界面上的回退按钮。Tether 会按文件快照尝试恢复本轮改动前的内容；若文件在之后又被改过，默认会拒绝覆盖，可按提示强制恢复。",
         },
       ],
     },
@@ -211,8 +211,8 @@ export const locales = {
       cta: "在 GitHub Issues 反馈问题 ↗",
     },
     footer: {
-      tagline: "开源、本地优先的 Agent Harness",
-      builtWith: "以极简与纯粹的开发者体验为中心构建。",
+      tagline: "基于 Pi 生态的本地优先 Agent 工作台",
+      builtWith: "Pi 提供基础，Tether 负责安全边界与桌面体验。",
       colProduct: "产品",
       colResources: "资源",
       colCommunity: "社区",
@@ -221,7 +221,7 @@ export const locales = {
         features: "功能特性",
         changelog: "更新日志",
         docs: "开发文档",
-        harness: "Harness 架构指南",
+        harness: "开放架构",
         github: "GitHub 仓库",
         issues: "提交反馈 (Issues)",
         license: "MIT 许可证",
@@ -233,7 +233,7 @@ export const locales = {
     nav: {
       downloads: "Downloads",
       features: "Features",
-      architecture: "Harness Architecture",
+      architecture: "Architecture",
       quickstart: "Quickstart",
       comparison: "Compare",
       faq: "FAQ",
@@ -243,24 +243,24 @@ export const locales = {
     },
     hero: {
       titleLine1: "Tether",
-      titleLine2: "Agent Harness",
+      titleLine2: "Local-First Workbench",
       subtitle:
-        "Turn model reasoning into precise, safe, reviewable repository changes. Streaming chain-of-thought, transactional /undo, built-in MinerU OCR — 100% on your machine.",
+        "Built on the Pi agent ecosystem and the tether-agent-core npm package, Tether turns DeepSeek and compatible models into visible, controlled, recoverable repository changes. Sessions stay local; model requests go directly to your endpoint.",
       primaryCtaMac: "Download for macOS (Apple Silicon)",
       primaryCtaWin: "Download for Windows (x64)",
       primaryCtaGeneric: "Download Desktop App",
       secondaryCta: "View GitHub Repo",
       stats: {
-        privacy: "100% Local 0600 Encrypted Storage",
-        models: "Open gateways · Ollama · Custom APIs",
-        undo: "Atomic /undo File Snapshot Rollback",
-        license: "MIT Licensed",
+        privacy: "Local sessions · No Tether relay",
+        models: "DeepSeek · Ollama · Custom gateways",
+        undo: "Checkpoints · /undo recovery",
+        license: "Built on Pi · MIT",
       },
     },
     productPreview: {
       tag: "Interface",
-      title: "Focused & Responsive Local AI Coding Workspace",
-      subtitle: "Clear visibility into reasoning traces, AST search, live patching, and snapshot rollbacks.",
+      title: "See what the agent is doing in your repository",
+      subtitle: "One view for model status, tool calls, terminal output, file diffs, and checkpoint recovery.",
     },
     download: {
       tag: "Desktop Installers",
@@ -288,49 +288,49 @@ export const locales = {
         "Note: macOS builds are development-signed. If Gatekeeper blocks open, right-click → Open, or run xattr -cr /Applications/Tether.app. On Windows, if SmartScreen appears, choose More info → Run anyway.",
     },
     architecture: {
-      tag: "Architecture",
-      title: "What is Tether Agent Harness?",
-      subtitle: "Large models generate reasoning; Tether Harness provides the repository eyes, hands, and safety guardrails.",
+      tag: "Open Architecture",
+      title: "Pi provides the foundations; Tether makes them safe and usable",
+      subtitle: "We distinguish upstream foundations from Tether's product layer instead of presenting open-source dependencies as a proprietary kernel.",
       step1: {
-        title: "1. DeepSeek Reasoning Engine",
-        desc: "DeepSeek V3 / R1 or custom models provide deep logical breakdown and patch drafts.",
+        title: "1. Pi Agent Ecosystem",
+        desc: "Agent state and tool loops, model protocols, coding-agent extensions and RPC, plus terminal components for the Runtime CLI.",
       },
       step2: {
-        title: "2. Tether Harness Orchestration",
-        desc: "Injects AST context, Ripgrep search, smart context compaction, file checkpoints, and OS sandboxes.",
+        title: "2. tether-agent-core",
+        desc: "Adds DeepSeek defaults, four permission modes, workspace tools, OS sandboxing, managed commands, checkpoints, MCP, Hooks, and Skills.",
       },
       step3: {
-        title: "3. Verified Reviewable Patch",
-        desc: "Outputs test-checked, lint-free patches with one-click review and atomic /undo rollback.",
+        title: "3. Tether Desktop",
+        desc: "An Electron and React workbench for project threads, live activity, diff review, settings, and bilingual interaction over a separate agent process.",
       },
     },
     features: {
       tag: "Core Features",
-      title: "Built for Demanding Engineering Workflows",
-      subtitle: "Not just a chat box — a true local agent workbench that navigates and understands large codebases.",
+      title: "Clear boundaries on top of proven agent foundations",
+      subtitle: "Pi supplies general agent infrastructure; Tether focuses on DeepSeek, local workspaces, safety policy, and desktop collaboration.",
       f1: {
-        title: "DeepSeek Native & Streaming Thoughts",
-        desc: "Configure High / Medium / Low reasoning depth with full chain-of-thought visibility. Automatic /compact keeps token consumption lean.",
+        title: "Pi-powered agent loop",
+        desc: "Built on pi-agent-core, pi-ai, and pi-coding-agent for message streams, model calls, tools, extension lifecycle, and sessions.",
       },
       f2: {
-        title: "100% Open & Any Gateway",
-        desc: "Connect official DeepSeek API, OneAPI, Ollama, vLLM, or private corporate proxies with zero vendor lock-in.",
+        title: "DeepSeek first, endpoints open",
+        desc: "Use the official DeepSeek API, a custom Base URL with model discovery, or compatible OneAPI, Ollama, and vLLM endpoints.",
       },
       f3: {
-        title: "Local-First & Atomic /undo",
-        desc: "Sessions and keys stay strictly inside ~/.tether (0600 permissions). Every modification is snapshotted for instant rollback.",
+        title: "Local state and recoverable edits",
+        desc: "Sessions, settings, and credentials live under ~/.tether. Patches write file checkpoints so /undo can restore the previous turn (conflicts refuse overwrite by default).",
       },
       f4: {
-        title: "Built-in MinerU Local OCR",
-        desc: "Free offline code and table extraction from UI mocks and error screenshots without paid third-party vision tokens.",
+        title: "Image understanding and OCR",
+        desc: "Use optional GLM-4V visual understanding or the MinerU OCR service. Images are sent to the selected service; OCR is not offline.",
       },
       f5: {
-        title: "OS-Level Native Sandbox",
-        desc: "Shell commands run in an OS sandbox with network blocked by default. Dangerous actions require explicit confirmation.",
+        title: "Permission modes and OS sandbox",
+        desc: "Plan, Ask, Workspace, and Full modes pair with macOS Seatbelt; Windows sandbox helpers are available where installed and enabled. Boundary escalation still requires approval.",
       },
       f6: {
-        title: "Seamless Dev Workflow Fit",
-        desc: "Reads existing AGENTS.md, CLAUDE.md, Agent Skills, and Model Context Protocol (MCP) without disrupting your stack.",
+        title: "Open extension and project context",
+        desc: "Use AGENTS.md, CLAUDE.md, Agent Skills, MCP, and Hooks to bring team rules into the same agent workflow.",
       },
     },
     quickstart: {
@@ -341,7 +341,7 @@ export const locales = {
         num: "01",
         title: "Download & Launch Tether Desktop",
         desc: "Download the macOS (.dmg) or Windows (.exe) package for your operating system and launch.",
-        action: "Supports macOS (Apple Silicon / Intel) & Windows 10/11",
+        action: "Supports macOS Apple Silicon & Windows 10/11 x64",
       },
       step2: {
         num: "02",
@@ -353,7 +353,7 @@ export const locales = {
         num: "03",
         title: "Open Repo & Start Coding",
         desc: "Choose your workspace directory, describe your task in natural language, and review patches live.",
-        action: "Protected by OS sandbox & atomic /undo snapshots",
+        action: "Permission modes, OS sandbox, and Checkpoint /undo",
       },
     },
     comparison: {
@@ -367,7 +367,7 @@ export const locales = {
         chatbots: "Web Chatbots",
         d1: {
           name: "Code & Session Privacy",
-          tether: "100% Local (~/.tether 0600)",
+          tether: "Sessions & config stored in local ~/.tether",
           closed: "Code indexed & stored in cloud",
           chat: "Manual copy-paste into browser",
         },
@@ -379,25 +379,25 @@ export const locales = {
         },
         d3: {
           name: "Patch Verification",
-          tether: "AST Patches + Local Sandbox Tests",
+          tether: "Workspace patches + tools + sandboxed commands",
           closed: "Partial inline completion",
           chat: "Manual copy-paste, no testing",
         },
         d4: {
           name: "Undo & Rollback",
-          tether: "Atomic /undo file snapshot rollback",
+          tether: "File-snapshot checkpoints · /undo restore",
           closed: "Relies on manual Ctrl+Z / Git",
           chat: "No workspace state awareness",
         },
         d5: {
-          name: "Local OCR Vision",
-          tether: "Built-in MinerU offline extractor",
+          name: "Images & OCR",
+          tether: "Optional GLM-4V + MinerU service",
           closed: "Costly per-token vision APIs",
           chat: "Cloud multimodal parsing",
         },
         d6: {
           name: "Open Source & Pricing",
-          tether: "MIT Open Source · Free forever",
+          tether: "MIT source · Bring your endpoint",
           closed: "$20~$40/mo proprietary lock-in",
           chat: "Monthly subscription fees",
         },
@@ -411,27 +411,27 @@ export const locales = {
         {
           question: "Is Tether completely free and open source?",
           answer:
-            "Yes. Tether is released under the permissive MIT license. Both the runtime and the desktop application are 100% free. You only pay for your own model API usage (or completely free with local Ollama).",
+            "Tether Desktop and its runtime use the MIT license and charge no software subscription. You are still responsible for model or OCR service fees; a compatible local model can avoid model API charges.",
         },
         {
           question: "What are the system requirements?",
           answer:
-            "Tether Desktop runs on macOS 12+ (Apple Silicon M-series and Intel) and Windows 10/11 64-bit. Because inference runs against APIs or your local Ollama server, Tether itself is extremely lightweight and fast.",
+            "Current installers support macOS Apple Silicon (arm64) and Windows 10/11 x64. Intel Mac installers are not currently provided. Inference runs through your configured remote API or compatible local gateway.",
         },
         {
           question: "Are my code or chats sent to Tether servers?",
           answer:
-            "Never. Tether is strictly local-first. We do not operate any telemetry or central proxy servers. All configs and session histories are stored in ~/.tether, communicating only with your chosen API endpoint.",
+            "Tether runs no telemetry or model relay server; configs, sessions, and checkpoints stay under ~/.tether. To complete tasks, prompts, relevant code context, and images are still sent to your selected model, gateway, or OCR service. Sensitive projects can use a compatible local endpoint.",
         },
         {
           question: "How do I connect private models like Ollama or vLLM?",
           answer:
-            "In Settings, choose Custom OpenAI-Compatible endpoint and input your base URL (e.g., http://localhost:11434/v1) and model identifier. It works completely offline in air-gapped intranets.",
+            "In Settings, choose Custom OpenAI-Compatible endpoint and input your base URL (e.g., http://localhost:11434/v1) and model identifier. Fully offline use depends on that gateway and whether the model supports tool calls.",
         },
         {
           question: "How do I rollback changes if the Agent makes a mistake?",
           answer:
-            "Type /undo in the prompt or click the undo button. Tether's transactional snapshot engine will restore all touched workspace files to the exact state before that action.",
+            "Type /undo in the prompt or click the undo button. Tether restores files from the previous checkpoint; if a file changed again afterward, overwrite is refused by default and you can force restore when prompted.",
         },
       ],
     },
@@ -441,8 +441,8 @@ export const locales = {
       cta: "Submit an Issue on GitHub ↗",
     },
     footer: {
-      tagline: "Open-source, local-first Agent Harness",
-      builtWith: "Built with a focus on developer autonomy and craftsmanship.",
+      tagline: "A local-first agent workbench built on Pi",
+      builtWith: "Pi provides the foundation; Tether defines the safety boundary and desktop experience.",
       colProduct: "Product",
       colResources: "Resources",
       colCommunity: "Community",
@@ -451,7 +451,7 @@ export const locales = {
         features: "Features",
         changelog: "Changelog",
         docs: "Documentation",
-        harness: "Harness Architecture",
+        harness: "Architecture",
         github: "GitHub Repository",
         issues: "Feedback & Issues",
         license: "MIT License",

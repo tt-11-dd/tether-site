@@ -894,6 +894,16 @@ code, pre {
   flex: 1;
 }
 
+.arch-step-src {
+  color: var(--brand);
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.arch-step-src:hover {
+  text-decoration: underline;
+}
+
 .arch-pill-list {
   display: flex;
   flex-direction: column;

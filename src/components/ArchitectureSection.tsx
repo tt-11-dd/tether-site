@@ -5,16 +5,16 @@ export function ArchitectureSection({ lang }: { lang: Language }) {
   const t = locales[lang].architecture;
   const pills = lang === "zh"
     ? {
-        step1: ["DeepSeek V3 / R1", "High 深度思考", "多步规划拆解"],
-        step2: ["AST 上下文注入", "/compact 长对话压缩", "事务级 /undo 快照", "MinerU 本地 OCR", "OS 断网沙箱隔离"],
-        step3: ["通过类型检查 & 单测", "可视化 Diff 审查", "零脏代码残留"],
-        core: "Phase 02 · 核心引擎",
+        step1: ["pi-agent-core", "pi-ai", "pi-coding-agent", "pi-tui"],
+        step2: ["四级权限", "OS 沙箱", "工作区补丁", "Checkpoint", "MCP · Hooks · Skills"],
+        step3: ["Electron + React", "独立 Agent 进程", "实时轨迹", "可视化 Diff"],
+        core: "Phase 02 · tether-agent-core",
       }
     : {
-        step1: ["DeepSeek V3 / R1", "High-depth reasoning", "Multi-step planning"],
-        step2: ["AST context injection", "/compact conversation compression", "Transactional /undo snapshots", "Local MinerU OCR", "Offline OS sandbox"],
-        step3: ["Typecheck & tests", "Visual diff review", "No dirty changes"],
-        core: "Phase 02 · Core Engine",
+        step1: ["pi-agent-core", "pi-ai", "pi-coding-agent", "pi-tui"],
+        step2: ["Four permissions", "OS sandbox", "Workspace patches", "Checkpoints", "MCP · Hooks · Skills"],
+        step3: ["Electron + React", "Separate agent process", "Live activity", "Visual diff"],
+        core: "Phase 02 · tether-agent-core",
       };
 
   return (
@@ -31,7 +31,12 @@ export function ArchitectureSection({ lang }: { lang: Language }) {
           <div className="arch-step-card">
             <div className="arch-step-badge">Phase 01</div>
             <h3 className="arch-step-title">{t.step1.title}</h3>
-            <p className="arch-step-desc">{t.step1.desc}</p>
+            <p className="arch-step-desc">
+              {t.step1.desc}{" "}
+              <a className="arch-step-src" href="https://github.com/earendil-works/pi" target="_blank" rel="noreferrer">
+                github.com/earendil-works/pi
+              </a>
+            </p>
             <div className="arch-pill-list">
               {pills.step1.map((pill) => <span key={pill} className="arch-pill">{pill}</span>)}
             </div>
@@ -42,11 +47,16 @@ export function ArchitectureSection({ lang }: { lang: Language }) {
             <span className="connector-symbol">+</span>
           </div>
 
-          {/* Step 2: Tether Harness */}
+          {/* Step 2: tether-agent-core */}
           <div className="arch-step-card highlight">
             <div className="arch-step-badge active">{pills.core}</div>
             <h3 className="arch-step-title">{t.step2.title}</h3>
-            <p className="arch-step-desc">{t.step2.desc}</p>
+            <p className="arch-step-desc">
+              {t.step2.desc}{" "}
+              <a className="arch-step-src" href="https://www.npmjs.com/package/tether-agent-core" target="_blank" rel="noreferrer">
+                npmjs.com/package/tether-agent-core
+              </a>
+            </p>
             <div className="arch-pill-list">
               {pills.step2.map((pill) => <span key={pill} className="arch-pill active">{pill}</span>)}
             </div>

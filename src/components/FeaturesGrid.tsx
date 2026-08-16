@@ -5,20 +5,20 @@ export function FeaturesGrid({ lang }: { lang: Language }) {
   const t = locales[lang].features;
   const copy = lang === "zh"
     ? [
-        ["深度推理", "Think Depth: High / Medium / Low · /compact 自动瘦身"],
-        ["开放自由", "DeepSeek / OneAPI / Ollama / vLLM / 企业自建私有网关"],
-        ["原子级安全", "会话保存在 ~/.tether (0600) · 事务级 /undo 秒级恢复"],
-        ["本地视觉", "内置 MinerU 本地 OCR · 免 API Key · 零云端 Token 消耗"],
-        ["OS 沙箱隔离", "默认断网沙箱 · 限制写文件于工作区 · 越权需人工审批"],
-        ["工程生态", "读取 AGENTS.md / CLAUDE.md · 支持 Agent Skills & MCP"],
+        ["Pi 基础", "pi-agent-core · pi-ai · pi-coding-agent · pi-tui"],
+        ["开放端点", "DeepSeek · OneAPI · Ollama · vLLM · 自定义 Base URL"],
+        ["可恢复", "~/.tether 本地状态 · Checkpoint · /undo"],
+        ["图片管线", "可选 GLM-4V · MinerU OCR 服务 · 明确数据去向"],
+        ["安全边界", "Plan / Ask / Workspace / Full · OS 沙箱"],
+        ["开放扩展", "AGENTS.md · CLAUDE.md · Skills · MCP · Hooks"],
       ]
     : [
-        ["Deep Reasoning", "Think Depth: High / Medium / Low · Automatic /compact"],
-        ["Open Ecosystem", "DeepSeek / OneAPI / Ollama / vLLM / private gateways"],
-        ["Atomic Safety", "Sessions in ~/.tether (0600) · Instant transactional /undo"],
-        ["Local Vision", "Built-in MinerU OCR · No API key · Zero cloud vision tokens"],
-        ["OS Sandbox", "Offline by default · Workspace-only writes · Approval for escalation"],
-        ["Dev Ecosystem", "Reads AGENTS.md / CLAUDE.md · Agent Skills & MCP support"],
+        ["Pi foundation", "pi-agent-core · pi-ai · pi-coding-agent · pi-tui"],
+        ["Open endpoints", "DeepSeek · OneAPI · Ollama · vLLM · Custom Base URL"],
+        ["Recoverable", "Local ~/.tether state · Checkpoints · /undo"],
+        ["Image pipeline", "Optional GLM-4V · MinerU OCR service · Clear data path"],
+        ["Safety boundary", "Plan / Ask / Workspace / Full · OS sandbox"],
+        ["Open extension", "AGENTS.md · CLAUDE.md · Skills · MCP · Hooks"],
       ];
 
   const featuresList = [
