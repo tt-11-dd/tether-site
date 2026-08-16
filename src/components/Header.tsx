@@ -42,8 +42,10 @@ export function Header({
       <div className="header-inner container">
         <a href="#" className="brand-link" onClick={() => setMobileMenuOpen(false)}>
           <img src={logo} alt="Tether Logo" className="brand-logo" width="34" height="20" />
-          <span className="brand-name">Tether</span>
-          {downloads.tag ? <span className="brand-badge">{downloads.tag}</span> : null}
+          <span className="brand-name">
+            Tether
+            {downloads.tag ? <span className="brand-version">{downloads.tag}</span> : null}
+          </span>
         </a>
 
         {/* 桌面端主导航 */}

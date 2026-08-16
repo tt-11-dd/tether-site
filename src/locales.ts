@@ -13,6 +13,7 @@ export const locales = {
     },
     hero: {
       titleLine1: "Tether",
+      titleLine2: "本地优先工作台",
       subtitle:
         "基于 Pi Agent 生态构建，把 DeepSeek 与兼容模型的推理变成可见、可控、可撤销的代码改动。会话与工作区数据留在本机，模型请求直达你配置的端点。",
       primaryCtaMac: "下载 macOS 版 (Apple Silicon)",
@@ -29,7 +30,7 @@ export const locales = {
     productPreview: {
       tag: "工作台界面",
       title: "看得见 Agent 在仓库里做了什么",
-      subtitle: "统一展示推理状态、工具调用、终端输出、文件 Diff 与检查点恢复。",
+      subtitle: "统一展示推理状态、工具调用、终端输出、文件 Diff 与检查点恢复。生成中可排队后续问题，结束后按序发送。",
     },
     download: {
       tag: "桌面版安装包",
@@ -65,12 +66,12 @@ export const locales = {
         desc: "复用 Agent 状态与工具循环、模型协议、Coding Agent 扩展与 RPC，以及 Runtime CLI 的终端组件。",
       },
       step2: {
-        title: "2. tether-agent-core",
+        title: "2. Agent 内核",
         desc: "在 Pi 上增加 DeepSeek 默认体验、四级权限、工作区工具、OS 沙箱、托管命令、Checkpoint、MCP、Hooks 与 Skills。",
       },
       step3: {
         title: "3. Tether Desktop",
-        desc: "Electron 与 React 工作台通过独立 Agent 进程提供项目会话、实时轨迹、Diff 审查、设置与中英文交互。",
+        desc: "Electron 与 React 工作台通过独立 Agent 进程提供项目会话、实时轨迹、后续排队、Diff 审查、设置与中英文交互。",
       },
     },
     features: {
@@ -95,7 +96,7 @@ export const locales = {
       },
       f5: {
         title: "权限模式与 OS 沙箱",
-        desc: "Plan、Ask、Workspace 与 Full 四种权限配合 macOS Seatbelt 和 Windows sandbox helper，越界操作显式审批。",
+        desc: "Plan、Ask、Workspace 与 Full 四种权限配合 macOS Seatbelt；Windows sandbox helper 需安装并启用后可用，越界操作显式审批。",
       },
       f6: {
         title: "开放扩展与工程上下文",
@@ -121,8 +122,8 @@ export const locales = {
       step3: {
         num: "03",
         title: "打开项目目录，开始协作",
-        desc: "点击「打开文件夹」选定代码库，用自然语言提出需求，实时审查生成的代码补丁并随时 /undo 回退。",
-        action: "权限模式、OS 沙箱与 Checkpoint /undo 保护",
+        desc: "点击「打开文件夹」选定代码库，用自然语言提出需求。生成尚未结束时也可输入下一条（最多排 5 条），当前轮结束后自动发送；需要时随时 /undo 回退。",
+        action: "权限模式、后续排队、OS 沙箱与 Checkpoint /undo 保护",
       },
     },
     comparison: {
@@ -202,6 +203,11 @@ export const locales = {
           answer:
             "在输入框中直接输入 /undo 或点击界面上的回退按钮。Tether 会按文件快照尝试恢复本轮改动前的内容；若文件在之后又被改过，默认会拒绝覆盖，可按提示强制恢复。",
         },
+        {
+          question: "生成还没结束时，可以继续提问吗？",
+          answer:
+            "可以。回车会把问题排到输入框上方（最多 5 条），当前回答结束后按顺序发送。点停止会中止本轮但保留排队，再用「立即发送」发出。换对话或换项目会清空排队；排队只存在于当前窗口，不会写入会话文件。",
+        },
       ],
     },
     feedbackBanner: {
@@ -242,6 +248,7 @@ export const locales = {
     },
     hero: {
       titleLine1: "Tether",
+      titleLine2: "Local-First Workbench",
       subtitle:
         "Built on the Pi agent ecosystem, Tether turns DeepSeek and compatible models into visible, controlled, recoverable repository changes. Sessions stay local; model requests go directly to your endpoint.",
       primaryCtaMac: "Download for macOS (Apple Silicon)",
@@ -258,7 +265,7 @@ export const locales = {
     productPreview: {
       tag: "Interface",
       title: "See what the agent is doing in your repository",
-      subtitle: "One view for model status, tool calls, terminal output, file diffs, and checkpoint recovery.",
+      subtitle: "One view for model status, tool calls, terminal output, file diffs, and checkpoint recovery. Queue follow-ups while a reply is still generating.",
     },
     download: {
       tag: "Desktop Installers",
@@ -294,12 +301,12 @@ export const locales = {
         desc: "Agent state and tool loops, model protocols, coding-agent extensions and RPC, plus terminal components for the Runtime CLI.",
       },
       step2: {
-        title: "2. tether-agent-core",
+        title: "2. Agent Core",
         desc: "Adds DeepSeek defaults, four permission modes, workspace tools, OS sandboxing, managed commands, checkpoints, MCP, Hooks, and Skills.",
       },
       step3: {
         title: "3. Tether Desktop",
-        desc: "An Electron and React workbench for project threads, live activity, diff review, settings, and bilingual interaction over a separate agent process.",
+        desc: "An Electron and React workbench for project threads, live activity, follow-up queue, diff review, settings, and bilingual interaction over a separate agent process.",
       },
     },
     features: {
@@ -350,8 +357,8 @@ export const locales = {
       step3: {
         num: "03",
         title: "Open Repo & Start Coding",
-        desc: "Choose your workspace directory, describe your task in natural language, and review patches live.",
-        action: "Permission modes, OS sandbox, and Checkpoint /undo",
+        desc: "Choose your workspace, describe the task, and review patches live. You can queue the next prompt (up to 5) while a reply is still generating; it sends when the current turn finishes. Use /undo when needed.",
+        action: "Permission modes, follow-up queue, OS sandbox, and Checkpoint /undo",
       },
     },
     comparison: {
@@ -430,6 +437,11 @@ export const locales = {
           question: "How do I rollback changes if the Agent makes a mistake?",
           answer:
             "Type /undo in the prompt or click the undo button. Tether restores files from the previous checkpoint; if a file changed again afterward, overwrite is refused by default and you can force restore when prompted.",
+        },
+        {
+          question: "Can I ask another question while a reply is still generating?",
+          answer:
+            "Yes. Press Enter to queue it above the composer (max 5). Queued prompts send in order when the current turn finishes. Stop aborts the turn but keeps the queue; use Send now to dispatch it. Switching thread or project clears the queue. It is not stored in the session file.",
         },
       ],
     },

@@ -8,13 +8,13 @@ export function ArchitectureSection({ lang }: { lang: Language }) {
         step1: ["pi-agent-core", "pi-ai", "pi-coding-agent", "pi-tui"],
         step2: ["四级权限", "OS 沙箱", "工作区补丁", "Checkpoint", "MCP · Hooks · Skills"],
         step3: ["Electron + React", "独立 Agent 进程", "实时轨迹", "可视化 Diff"],
-        core: "Phase 02 · tether-agent-core",
+        core: "Phase 02 · Agent 内核",
       }
     : {
         step1: ["pi-agent-core", "pi-ai", "pi-coding-agent", "pi-tui"],
         step2: ["Four permissions", "OS sandbox", "Workspace patches", "Checkpoints", "MCP · Hooks · Skills"],
         step3: ["Electron + React", "Separate agent process", "Live activity", "Visual diff"],
-        core: "Phase 02 · tether-agent-core",
+        core: "Phase 02 · Agent Core",
       };
 
   return (

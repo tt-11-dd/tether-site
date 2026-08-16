@@ -32,7 +32,11 @@ export function Hero({ lang }: { lang: Language }) {
     <section className="hero-section">
       <div className="container hero-container">
         <h1 className="hero-title">
-          <span className="hero-line1">{t.titleLine1}</span>
+          <span className="hero-line1">
+            {t.titleLine1}
+            {downloads.tag ? <span className="hero-version">{downloads.tag}</span> : null}
+          </span>
+          <span className="hero-line2">{t.titleLine2}</span>
         </h1>
 
         <p className="hero-subtitle">{t.subtitle}</p>
