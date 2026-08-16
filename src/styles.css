@@ -434,17 +434,24 @@ code, pre {
   color: var(--brand);
 }
 
-.hero-line2 {
-  display: block;
-  color: var(--ink-primary);
-}
-
 .hero-subtitle {
   font-size: 18px;
   line-height: 1.6;
   color: var(--ink-secondary);
   max-width: 680px;
   margin-bottom: 32px;
+}
+
+.hero-subtitle-lead {
+  display: block;
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--ink-primary);
+  margin-bottom: 8px;
+}
+
+.hero-subtitle-desc {
+  display: block;
 }
 
 .hero-actions {
@@ -1428,6 +1435,10 @@ code, pre {
     font-size: 14.5px;
     line-height: 1.6;
     margin-bottom: 24px;
+  }
+
+  .hero-subtitle-lead {
+    font-size: 17px;
   }
 
   .hero-actions {

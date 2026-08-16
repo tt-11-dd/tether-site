@@ -71,7 +71,7 @@ export function Footer({ lang }: { lang: Language }) {
 
       <div className="footer-bottom container">
         <p className="copyright">{t.copyright}</p>
-        <p className="open-source-note">Open Source under MIT License · Local-First Workbench · Built on Pi</p>
+        <p className="open-source-note">Open Source under MIT License · Agent Workbench · Built on Pi</p>
       </div>
     </footer>
   );
