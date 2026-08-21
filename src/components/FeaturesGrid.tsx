@@ -8,7 +8,7 @@ export function FeaturesGrid({ lang }: { lang: Language }) {
         ["Pi 基础", "pi-agent-core · pi-ai · pi-coding-agent · pi-tui"],
         ["开放端点", "DeepSeek · OneAPI · Ollama · vLLM · 自定义 Base URL"],
         ["可恢复", "~/.tether 本地状态 · Checkpoint · /undo"],
-        ["图片管线", "可选 GLM-4V · MinerU OCR 服务 · 明确数据去向"],
+        ["图片管线", "原生识图优先 · DeepSeek / 自定义视觉 · MinerU 兜底"],
         ["安全边界", "Plan / Ask / Workspace / Full · OS 沙箱"],
         ["开放扩展", "AGENTS.md · CLAUDE.md · Skills · MCP · Hooks"],
       ]
@@ -16,7 +16,7 @@ export function FeaturesGrid({ lang }: { lang: Language }) {
         ["Pi foundation", "pi-agent-core · pi-ai · pi-coding-agent · pi-tui"],
         ["Open endpoints", "DeepSeek · OneAPI · Ollama · vLLM · Custom Base URL"],
         ["Recoverable", "Local ~/.tether state · Checkpoints · /undo"],
-        ["Image pipeline", "Optional GLM-4V · MinerU OCR service · Clear data path"],
+        ["Image pipeline", "Native vision first · DeepSeek / custom · MinerU fallback"],
         ["Safety boundary", "Plan / Ask / Workspace / Full · OS sandbox"],
         ["Open extension", "AGENTS.md · CLAUDE.md · Skills · MCP · Hooks"],
       ];

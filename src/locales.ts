@@ -129,7 +129,7 @@ export const locales = {
       },
       f4: {
         title: "图片理解与 OCR 流程",
-        desc: "可选 GLM-4V 进行视觉理解，也可调用 MinerU 服务提取图片文本；图片会发送到所选服务，并非离线本地 OCR。",
+        desc: "对话模型支持识图时优先原生传图；否则可用设置中的 DeepSeek 识图或自定义视觉 API。未配置识图密钥时才走 MinerU OCR；图片会发到所选服务，并非离线本地识别。",
       },
       f5: {
         title: "权限模式与 OS 沙箱",
@@ -198,7 +198,7 @@ export const locales = {
         },
         d5: {
           name: "图片与 OCR",
-          tether: "可选 GLM-4V + MinerU 服务",
+          tether: "原生识图优先 · 可配 DeepSeek / 自定义视觉 · MinerU 兜底",
           closed: "按 Token 计费的高昂 Vision API",
           chat: "依赖云端多模态分析",
         },
@@ -401,7 +401,7 @@ export const locales = {
       },
       f4: {
         title: "Image understanding and OCR",
-        desc: "Use optional GLM-4V visual understanding or the MinerU OCR service. Images are sent to the selected service; OCR is not offline.",
+        desc: "When the chat model supports vision, images go natively first. Otherwise use DeepSeek vision or a custom vision API in settings. MinerU OCR runs only without a vision key. Images leave the machine for the chosen service—OCR is not offline.",
       },
       f5: {
         title: "Permission modes and OS sandbox",
@@ -470,7 +470,7 @@ export const locales = {
         },
         d5: {
           name: "Images & OCR",
-          tether: "Optional GLM-4V + MinerU service",
+          tether: "Native vision first · DeepSeek / custom vision · MinerU fallback",
           closed: "Costly per-token vision APIs",
           chat: "Cloud multimodal parsing",
         },
