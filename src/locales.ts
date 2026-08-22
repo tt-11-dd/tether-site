@@ -30,7 +30,8 @@ export const locales = {
     productPreview: {
       tag: "工作台界面",
       title: "看得见 Agent 在仓库里做了什么",
-      subtitle: "统一展示推理状态、工具调用、终端输出、文件 Diff 与检查点恢复。生成中可排队后续问题，结束后按序发送。",
+      subtitle:
+        "聊天气泡之外，右侧检查栏集中展示工作文件、任务清单与终端 job；Diff 抽屉审查补丁，Checkpoint 支持 /undo。生成中可插话，立刻进入当前轮次。",
     },
     download: {
       tag: "桌面版安装包",
@@ -80,12 +81,12 @@ export const locales = {
         {
           kicker: "Constraints",
           title: "约束与强制执行",
-          desc: "Plan / Ask / Workspace / Full 加上 OS 沙箱，把能做的边界写成可执行规则。缺的不是「再努力一点」，而是对 Agent 既清晰可读又可强制执行的能力。",
+          desc: "Plan / Ask / Workspace / Full 加上 OS 沙箱，把能做的边界写成可执行规则。Plan 模式先出方案，再在界面批准执行或 refine，而不是一上来就改文件。",
         },
         {
           kicker: "Feedback Loop",
           title: "反馈回路与长程任务",
-          desc: "工具输出、测试、Diff 与 Checkpoint 构成闭环；/compact 压缩旧对话，进度文件与检查点把工作留给下一扇窗口，避免半截实现和过早宣布完成。",
+          desc: "工具输出、测试、Diff 与 Checkpoint 构成闭环；/compact 压缩旧对话，接近上下文上限时会自动压缩。进度文件与检查点把工作留给下一扇窗口，避免半截实现和过早宣布完成。",
         },
       ],
       note: "术语对齐 OpenAI 的 Harness Engineering（设计环境、意图与反馈回路）和 Anthropic 对 long-running agent harness 的实践（跨 context window 的增量进度与干净状态）。循环来自 Pi；Tether 做权限、沙箱、Checkpoint 与桌面层。",
@@ -108,7 +109,7 @@ export const locales = {
       },
       step3: {
         title: "3. Tether Desktop",
-        desc: "Electron 与 React 工作台通过独立 Agent 进程提供项目会话、实时轨迹、后续排队、Diff 审查、设置与中英文交互。",
+        desc: "Electron 与 React 工作台通过独立 Agent 进程提供项目会话、右侧检查栏、实时轨迹、生成中插话、Diff 审查、设置与中英文交互。",
       },
     },
     features: {
@@ -132,12 +133,12 @@ export const locales = {
         desc: "对话模型支持识图时优先原生传图；否则可用设置中的 DeepSeek 识图或自定义视觉 API。未配置识图密钥时才走 MinerU OCR；图片会发到所选服务，并非离线本地识别。",
       },
       f5: {
-        title: "权限模式与 OS 沙箱",
-        desc: "Plan、Ask、Workspace 与 Full 四种权限配合 macOS Seatbelt；Windows sandbox helper 需安装并启用后可用，越界操作显式审批。",
+        title: "Plan 先规划，再批准执行",
+        desc: "Plan 模式只读分析与出方案，不直接改文件；确认后在界面批准执行或 refine。Ask、Workspace、Full 逐级放开写入与命令，配合 macOS Seatbelt 与 Windows sandbox helper（需安装并启用）。",
       },
       f6: {
-        title: "开放扩展与工程上下文",
-        desc: "支持 AGENTS.md、CLAUDE.md、Agent Skills、MCP 与 Hooks，把团队规则接入同一 Agent 工作流。",
+        title: "开放扩展与 @ 文件引用",
+        desc: "支持 AGENTS.md、CLAUDE.md、Agent Skills、MCP 与 Hooks。输入 @ 可引用具体文件，缩小上下文、减少无关改动，把团队规则接入同一 Agent 工作流。",
       },
     },
     quickstart: {
@@ -159,8 +160,8 @@ export const locales = {
       step3: {
         num: "03",
         title: "打开项目目录，开始协作",
-        desc: "点击「打开文件夹」选定代码库，用自然语言提出需求。生成尚未结束时也可输入下一条（最多排 5 条），当前轮结束后自动发送；需要时随时 /undo 回退。",
-        action: "权限模式、后续排队、OS 沙箱与 Checkpoint /undo 保护",
+        desc: "点击「打开文件夹」选定代码库，用自然语言提出需求；需要时用 @ 引用具体文件。生成尚未结束时也可插话，立刻进入当前轮；改错了随时 /undo 回退。",
+        action: "Plan 批准、@ 引用、生成中插话、OS 沙箱与 Checkpoint /undo",
       },
     },
     comparison: {
@@ -243,7 +244,22 @@ export const locales = {
         {
           question: "生成还没结束时，可以继续提问吗？",
           answer:
-            "可以。回车会把问题排到输入框上方（最多 5 条），当前回答结束后按顺序发送。点停止会中止本轮但保留排队，再用「立即发送」发出。换对话或换项目会清空排队；排队只存在于当前窗口，不会写入会话文件。",
+            "可以。回车会把内容作为插话立刻交给当前轮次，并显示在输入框上方；以 / 开头的命令不会作为插话发送。换对话或换项目会清空未完成的插话展示；插话不会单独写入会话文件。",
+        },
+        {
+          question: "Plan 模式和其他权限有什么区别？",
+          answer:
+            "Plan 只做只读分析与规划，诊断命令可在只读沙箱中运行，不会直接改文件。方案确认后，可在界面批准执行或 refine，再切到 Ask / Workspace / Full 逐步放开写入与命令。适合先看清改动范围再动手。",
+        },
+        {
+          question: "有哪些常用斜杠命令？",
+          answer:
+            "/undo 按文件快照回退上一轮改动（冲突时默认拒绝覆盖）；/compact 手动压缩旧对话释放上下文，接近上限时也会自动压缩。输入 / 可查看完整命令列表；生成过程中的插话不走斜杠命令。",
+        },
+        {
+          question: "Windows 上的沙箱和 macOS 一样吗？",
+          answer:
+            "不完全一样。macOS 开箱即用 Seatbelt 沙箱；Windows 需额外安装并启用 sandbox helper 后，工作区命令才会受同等约束。无论哪一平台，越界写入、网络或敏感操作仍会弹出审批。沙箱是纵深防御，不替代你自己的代码审查。",
         },
       ],
     },
@@ -302,7 +318,8 @@ export const locales = {
     productPreview: {
       tag: "Interface",
       title: "See what the agent is doing in your repository",
-      subtitle: "One view for model status, tool calls, terminal output, file diffs, and checkpoint recovery. Queue follow-ups while a reply is still generating.",
+      subtitle:
+        "Beyond the chat stream, the inspect rail tracks working files, task lists, and terminal jobs; the diff drawer reviews patches, and checkpoints power /undo. Steer into the current turn while a reply is still generating.",
     },
     download: {
       tag: "Desktop Installers",
@@ -352,12 +369,12 @@ export const locales = {
         {
           kicker: "Constraints",
           title: "Constraints you can enforce",
-          desc: "Plan / Ask / Workspace / Full plus an OS sandbox turn boundaries into executable rules. Progress usually means adding a capability that is both readable and enforceable for the agent — not “try harder”.",
+          desc: "Plan / Ask / Workspace / Full plus an OS sandbox turn boundaries into executable rules. Plan mode drafts first—you approve execution or refine in the UI before files change.",
         },
         {
           kicker: "Feedback Loop",
           title: "Feedback loops & long-horizon work",
-          desc: "Tool output, tests, diffs, and checkpoints close the loop. /compact shrinks old turns; progress files and checkpoints leave a clean state for the next context window, instead of half-built features or a false “done”.",
+          desc: "Tool output, tests, diffs, and checkpoints close the loop. /compact shrinks old turns and auto-runs near the context limit. Progress files and checkpoints leave a clean state for the next context window, instead of half-built features or a false “done”.",
         },
       ],
       note: "Vocabulary follows OpenAI’s Harness Engineering (environment, intent, feedback loops) and Anthropic’s long-running agent harness (incremental progress across context windows, clean state). The loop comes from Pi; Tether adds permissions, sandbox, checkpoints, and the desktop layer.",
@@ -380,7 +397,7 @@ export const locales = {
       },
       step3: {
         title: "3. Tether Desktop",
-        desc: "An Electron and React workbench for project threads, live activity, follow-up queue, diff review, settings, and bilingual interaction over a separate agent process.",
+        desc: "An Electron and React workbench for project threads, the inspect rail, live activity, steer-while-generating, diff review, settings, and bilingual interaction over a separate agent process.",
       },
     },
     features: {
@@ -404,12 +421,12 @@ export const locales = {
         desc: "When the chat model supports vision, images go natively first. Otherwise use DeepSeek vision or a custom vision API in settings. MinerU OCR runs only without a vision key. Images leave the machine for the chosen service—OCR is not offline.",
       },
       f5: {
-        title: "Permission modes and OS sandbox",
-        desc: "Plan, Ask, Workspace, and Full modes pair with macOS Seatbelt; Windows sandbox helpers are available where installed and enabled. Boundary escalation still requires approval.",
+        title: "Plan first, approve before edits",
+        desc: "Plan mode stays read-only for analysis and proposals—no direct file writes. Approve execution or refine in the UI, then move through Ask, Workspace, and Full. Pairs with macOS Seatbelt and the Windows sandbox helper (install and enable required).",
       },
       f6: {
-        title: "Open extension and project context",
-        desc: "Use AGENTS.md, CLAUDE.md, Agent Skills, MCP, and Hooks to bring team rules into the same agent workflow.",
+        title: "Open extensions and @ file mentions",
+        desc: "Use AGENTS.md, CLAUDE.md, Agent Skills, MCP, and Hooks. Type @ to reference specific files, narrow context, and reduce unrelated edits while keeping team rules in one agent workflow.",
       },
     },
     quickstart: {
@@ -431,8 +448,8 @@ export const locales = {
       step3: {
         num: "03",
         title: "Open Repo & Start Coding",
-        desc: "Choose your workspace, describe the task, and review patches live. You can queue the next prompt (up to 5) while a reply is still generating; it sends when the current turn finishes. Use /undo when needed.",
-        action: "Permission modes, follow-up queue, OS sandbox, and Checkpoint /undo",
+        desc: "Choose your workspace and describe the task; use @ to reference specific files when needed. Steer a follow-up into the current turn while a reply is still generating. Use /undo to roll back.",
+        action: "Plan approval, @ mentions, steer-while-generating, OS sandbox, and Checkpoint /undo",
       },
     },
     comparison: {
@@ -515,7 +532,22 @@ export const locales = {
         {
           question: "Can I ask another question while a reply is still generating?",
           answer:
-            "Yes. Press Enter to queue it above the composer (max 5). Queued prompts send in order when the current turn finishes. Stop aborts the turn but keeps the queue; use Send now to dispatch it. Switching thread or project clears the queue. It is not stored in the session file.",
+            "Yes. Press Enter to steer it into the current turn immediately; it shows above the composer. Lines starting with / are not steered. Switching thread or project clears the on-screen steer list. Steers are not stored as their own session entries.",
+        },
+        {
+          question: "How is Plan mode different from the other permission modes?",
+          answer:
+            "Plan is read-only analysis and planning—diagnostic commands may run in a read-only sandbox, but files are not edited. After you review the proposal, approve execution or refine in the UI, then switch to Ask, Workspace, or Full to widen writes and commands. Good for seeing scope before edits land.",
+        },
+        {
+          question: "Which slash commands should I know?",
+          answer:
+            "/undo restores the previous turn from file snapshots (conflicts refuse overwrite by default); /compact manually shrinks old turns, and also runs automatically near the context limit. Type / for the full command list. Steers while generating do not use slash commands.",
+        },
+        {
+          question: "Is sandboxing the same on Windows and macOS?",
+          answer:
+            "Not exactly. macOS uses Seatbelt out of the box. On Windows you need to install and enable the sandbox helper before workspace commands get the same constraints. On both platforms, out-of-bound writes, network access, or sensitive actions still require approval. Sandbox is defense in depth—not a substitute for your own code review.",
         },
       ],
     },

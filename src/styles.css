@@ -649,7 +649,7 @@ code, pre {
 }
 
 .carousel-nav-btn:hover {
-  background: #ffffff;
+  background: var(--bg-card);
   color: var(--brand);
   box-shadow: 0 8px 24px rgba(28, 25, 23, 0.2);
 }
