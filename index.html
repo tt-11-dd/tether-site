@@ -3,12 +3,93 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Tether — Local-First AI Coding Workbench</title>
+
+    <!-- 基础 SEO -->
+    <title>Tether — 本地优先的 AI 编程工作台 | Local-First AI Coding Workbench</title>
     <meta
       name="description"
-      content="Tether 是基于 Pi 生态构建的本地优先 AI 编程工作台。会话留在本机，模型请求直达你配置的端点；支持权限模式、Checkpoint /undo、DeepSeek 与 OpenAI 兼容网关。"
+      content="Tether 是基于 Pi 生态构建的本地优先 AI 编程工作台。会话与工作区数据留在本机，模型请求直达你配置的端点。支持 DeepSeek、Ollama 与 OpenAI 兼容网关，四级权限、OS 沙箱、Checkpoint /undo 与 Diff 审查；免费下载 macOS (Apple Silicon) 与 Windows (x64) 桌面客户端。"
     />
+    <meta
+      name="keywords"
+      content="Tether, AI 编程工作台, 本地优先 AI, DeepSeek, Ollama, OpenAI 兼容网关, AI 智能体, Agent, 代码生成, Checkpoint, /undo, 沙箱, 权限模式, 上下文工程, Harness Engineering, 桌面客户端, macOS, Windows"
+    />
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1" />
+    <meta name="author" content="Tether" />
+    <meta name="application-name" content="Tether" />
+    <meta name="color-scheme" content="light" />
+    <meta name="theme-color" content="#8a6f5a" />
+    <link rel="canonical" href="https://tether-site.pages.dev/" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Tether" />
+    <meta property="og:locale" content="zh_CN" />
+    <meta property="og:url" content="https://tether-site.pages.dev/" />
+    <meta property="og:title" content="Tether — 本地优先的 AI 编程工作台" />
+    <meta
+      property="og:description"
+      content="把 DeepSeek 与兼容模型的推理变成可见、可控、可撤销的代码改动。会话留在本机，模型请求直达你配置的端点。支持 Checkpoint /undo、四级权限、OS 沙箱，免费下载 macOS 与 Windows 桌面客户端。"
+    />
+    <meta property="og:image" content="https://tether-site.pages.dev/og-image.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Tether 本地优先 AI 编程工作台界面预览" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Tether — 本地优先的 AI 编程工作台" />
+    <meta
+      name="twitter:description"
+      content="把 DeepSeek 与兼容模型的推理变成可见、可控、可撤销的代码改动。会话留在本机，模型请求直达你配置的端点。免费下载 macOS 与 Windows 桌面客户端。"
+    />
+    <meta name="twitter:image" content="https://tether-site.pages.dev/og-image.png" />
+
+    <!-- 结构化数据 -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "WebSite",
+            "@id": "https://tether-site.pages.dev/#website",
+            "url": "https://tether-site.pages.dev/",
+            "name": "Tether",
+            "alternateName": "Tether AI",
+            "description": "基于 Pi 生态构建的本地优先 AI 编程工作台，会话留在本机，模型请求直达你配置的端点。",
+            "inLanguage": "zh-CN",
+            "publisher": {
+              "@id": "https://tether-site.pages.dev/#organization"
+            }
+          },
+          {
+            "@type": "Organization",
+            "@id": "https://tether-site.pages.dev/#organization",
+            "name": "Tether",
+            "url": "https://tether-site.pages.dev/",
+            "logo": "https://tether-site.pages.dev/favicon.svg",
+            "sameAs": ["https://github.com/tt-11-dd/tether-ai"]
+          },
+          {
+            "@type": "SoftwareApplication",
+            "@id": "https://tether-site.pages.dev/#software",
+            "name": "Tether Desktop",
+            "description": "本地优先 AI 编程工作台桌面客户端：DeepSeek 与 OpenAI 兼容网关、四级权限、OS 沙箱、Checkpoint /undo、Diff 审查与中英文交互。",
+            "applicationCategory": "DeveloperApplication",
+            "operatingSystem": "macOS, Windows",
+            "downloadUrl": "https://github.com/tt-11-dd/tether-ai/releases/latest",
+            "sameAs": ["https://github.com/tt-11-dd/tether-ai"],
+            "offers": {
+              "@type": "Offer",
+              "price": "0",
+              "priceCurrency": "CNY"
+            },
+            "url": "https://tether-site.pages.dev/"
+          }
+        ]
+      }
+    </script>
   </head>
   <body>
     <div id="root"></div>
